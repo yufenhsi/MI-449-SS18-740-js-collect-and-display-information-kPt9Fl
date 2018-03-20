@@ -1,33 +1,32 @@
-var firstnameInput = document.getElementById('firstname')
-var lastnameInput = document.getElementById('lastname')
-var selfdescInput = document.getElementById('description')
-var emailInput = document.getElementById('email')
-var telInput = document.getElementById('tel')
-var madlibParagraph = document.getElementById('madlib')
-var paragraph = document.getElementById('my-paragraph')
+var firstnameInput = document.getElementById('FIRST_NAME')
+var lastnameInput = document.getElementById('LAST_NAME')
+var selfdescInput = document.getElementById('SELF_DESCRIPTION')
+var emailInput = document.getElementById('EMAIL_ADDRESS')
+var telInput = document.getElementById('PHONE_NUMBER')
+var profileRendered = document.getElementById('PROFILE_PREVIEW')
+var rawCode = document.getElementById('HTML-CODE')
 
-var updateMadlib = function () {
-  var firstname = firstnameInput.value
-  var lastname = lastnameInput.value
-  var description = selfdescInput.value
-  var email = emailInput.value
-  var tel = telInput.value
+var updateProfile = function () {
+  var FIRST_NAME = firstnameInput.value
+  var LAST_NAME = lastnameInput.value
+  var SELF_DESCRIPTION = selfdescInput.value
+  var EMAIL_ADDRESS = emailInput.value
+  var PHONE_NUMBER = telInput.value
 
-  madlibParagraph.innerHTML =
-  paragraph.textContent =
-    'Hi, my name is' +
-    '&nbsp;<strong>' + firstname + '</strong>' +
-    '&nbsp;<strong>' + lastname + '</strong>' +
-    '<pre>' + description + '</pre>' +
-    'If you\'re interested in a date, you can email me at' +
-    '&nbsp;<a href="mailto:EMAIL_ADDRESS" target="_blank">' + email + '</a>' +
-    '&nbsp;or give me a call at' +
-    '&nbsp;<a href="tel:PHONE_NUMBER" target="_blank">' + tel + '</a>' +
-    '<p>Good Day!</p>'
+  profileRendered.innerHTML =
+  rawCode.textContent =
+    '<h1>Hi, my name is' + FIRST_NAME + LAST_NAME + '!</h1>' +
+    '<p>DESCRIBE_YOURSELF_INFO</p>' + SELF_DESCRIPTION +
+    '<p>' +
+      'If you\'re interested in a date, you can email me at' +
+      '<a href="mailto:EMAIL_ADDRESS" target="_blank">' + EMAIL_ADDRESS + '</a>' +
+      'or give me a call at' +
+      '<a href="tel:PHONE_NUMBER" target="_blank">' + PHONE_NUMBER + '</a>' +
+    '</p>.'
 }
 
-firstnameInput.addEventListener('input', updateMadlib)
-lastnameInput.addEventListener('input', updateMadlib)
-selfdescInput.addEventListener('input', updateMadlib)
-emailInput.addEventListener('input', updateMadlib)
-telInput.addEventListener('input', updateMadlib)
+firstnameInput.addEventListener('input', updateProfile)
+lastnameInput.addEventListener('input', updateProfile)
+selfdescInput.addEventListener('input', updateProfile)
+emailInput.addEventListener('input', updateProfile)
+telInput.addEventListener('input', updateProfile)
