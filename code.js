@@ -1,32 +1,32 @@
-var firstnameInput = document.getElementById('FIRST_NAME')
-var lastnameInput = document.getElementById('LAST_NAME')
-var selfdescInput = document.getElementById('SELF_DESCRIPTION')
-var emailInput = document.getElementById('EMAIL_ADDRESS')
-var telInput = document.getElementById('PHONE_NUMBER')
-var profileRendered = document.getElementById('PROFILE_PREVIEW')
-var rawCode = document.getElementById('HTML-CODE')
+var firstNameInput = document.getElementById('firstname')
+var lastNameInput = document.getElementById('lastname')
+var selfDescInput = document.getElementById('description')
+var emailAddressInput = document.getElementById('email')
+var phoneNumberInput = document.getElementById('phNo')
+var profileRendered = document.getElementById('profile')
+var rawCode = document.getElementById('code')
 
 var updateProfile = function () {
-  var FIRST_NAME = firstnameInput.value
-  var LAST_NAME = lastnameInput.value
-  var SELF_DESCRIPTION = selfdescInput.value
-  var EMAIL_ADDRESS = emailInput.value
-  var PHONE_NUMBER = telInput.value
+  var firstname = firstNameInput.value
+  var lastname = lastNameInput.value
+  var description = selfDescInput.value
+  var email = emailAddressInput.value
+  var phNo = phoneNumberInput.value
 
   profileRendered.innerHTML =
-  rawCode.textContent =
-    '<h1>Hi, my name is' + FIRST_NAME + LAST_NAME + '!</h1>' +
-    '<p>DESCRIBE_YOURSELF_INFO</p>' + SELF_DESCRIPTION +
+    rawCode.textContent =
+    '<h1>Hi, my name is ' + firstname + ' ' + lastname + '!</h1>' +
+    '<p>DESCRIBE_YOURSELF_INFO ' + description + '</p>' +
     '<p>' +
-      'If you\'re interested in a date, you can email me at' +
-      '<a href="mailto:EMAIL_ADDRESS" target="_blank">' + EMAIL_ADDRESS + '</a>' +
-      'or give me a call at' +
-      '<a href="tel:PHONE_NUMBER" target="_blank">' + PHONE_NUMBER + '</a>' +
-    '</p>.'
+      'If you\'re interested in a date, you can email me at ' +
+      '<a href="mailto:' + email + '" target="_blank">' + email + '</a>' +
+      ' or give me a call at ' +
+      '<a href="tel:' + phNo + '" target="_blank">' + phNo + '</a>' +
+    '</p>'
 }
 
-firstnameInput.addEventListener('input', updateProfile)
-lastnameInput.addEventListener('input', updateProfile)
-selfdescInput.addEventListener('input', updateProfile)
-emailInput.addEventListener('input', updateProfile)
-telInput.addEventListener('input', updateProfile)
+firstNameInput.addEventListener('input', updateProfile)
+lastNameInput.addEventListener('input', updateProfile)
+selfDescInput.addEventListener('input', updateProfile)
+emailAddressInput.addEventListener('input', updateProfile)
+phoneNumberInput.addEventListener('input', updateProfile)
