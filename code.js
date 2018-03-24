@@ -15,8 +15,8 @@ var updateProfile = function () {
 
   profileRendered.innerHTML =
     rawCode.textContent =
-    '<h1>Hi, my name is ' + firstname + ' ' + lastname + '!</h1>' +
-    '<p>DESCRIBE_YOURSELF_INFO ' + description + '</p>' +
+    '<h1>Hi, my name is ' + firstname + ' ' + lastname + ' !</h1>' +
+    '<p>' + description + '</p>' +
     '<p>' +
       'If you\'re interested in a date, you can email me at ' +
       '<a href="mailto:' + email + '" target="_blank">' + email + '</a>' +
